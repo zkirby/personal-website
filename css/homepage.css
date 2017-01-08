@@ -1,0 +1,74 @@
+/* 
+The Style sheet for the home page.
+Constructed using Scss
+*/
+html,
+body {
+  height: 100%;
+  background: #13293D; }
+
+.background-div {
+  background: #006494;
+  background: -webkit-adial-gradient(#006494, #13293D);
+  background: -o-radial-gradient(#006494, #13293D);
+  background: -moz-radial-gradient(#006494, #13293D);
+  background: radial-gradient(#006494, #13293D);
+  height: 100%;
+  width: 100%; }
+  .background-div .name-text {
+    font-size: 140px;
+    font-weight: bold;
+    color: #13293D;
+    position: absolute;
+    top: 30%;
+    left: 36.5%; }
+  .background-div #ball {
+    border: 22px solid #E8F1F2;
+    border-radius: 100px;
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    transition: 0.4s;
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+    background: #13293D; }
+    .background-div #ball #icon {
+      position: relative;
+      font-size: 70px;
+      top: 17%;
+      color: #E8F1F2; }
+      .background-div #ball #icon .inside-text {
+        display: none;
+        position: absolute;
+        top: 20%;
+        font-size: 32px;
+        color: #E8F1F2;
+        font-weight: bold;
+        transition: 0.4s; }
+      .background-div #ball #icon .long.inside-text {
+        left: -25%; }
+    .background-div #ball:hover {
+      transform: scale(1.2);
+      transform: -webkit-scale(1.2);
+      transform: -o-scale(1.2);
+      transform: -moz-scale(1.2);
+      border: 15px solid #1B98E0; }
+
+.first-ball {
+  left: 20%;
+  top: 34%; }
+
+.second-ball {
+  left: 43%;
+  top: 5%; }
+
+.third-ball {
+  left: 66%;
+  top: 34%; }
+
+.fourth-ball {
+  left: 43%;
+  top: 65%; }
+
+/*# sourceMappingURL=homepage.css.map */

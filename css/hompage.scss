@@ -1,0 +1,108 @@
+/* 
+The Style sheet for the home page.
+Constructed using Scss
+*/
+
+// Color Palette
+$seablue: #006494;
+$lapiz: #247BA0;
+$antiwhite: #E8F1F2;
+$cerulean: #1B98E0;
+$yankeesblue: #13293D;
+
+//Variables
+$ball-names: "first-ball", "second-ball", "third-ball", "fourth-ball";
+
+// Mixins 
+@mixin radial_blur($startcolor, $endcolor) {
+	background: $startcolor;
+	background: -webkit-adial-gradient($startcolor, $endcolor); 
+  	background: -o-radial-gradient($startcolor, $endcolor); 
+  	background: -moz-radial-gradient($startcolor, $endcolor); 
+  	background: radial-gradient($startcolor, $endcolor); 
+}
+
+@mixin grow($size) {
+	transform: scale($size);
+	transform: -webkit-scale($size);
+	transform: -o-scale($size);
+	transform: -moz-scale($size);
+}
+
+// Styling
+html,
+body {
+	height: 100%;
+	background: $yankeesblue;
+}
+
+.background-div {
+	@include radial_blur($seablue, $yankeesblue);
+	height: 100%;
+	width: 100%;
+
+	.name-text {
+		font-size: 140px;
+    	font-weight: bold;
+    	color: $yankeesblue;
+    	position: absolute;
+    	top: 30%;
+    	left: 36.5%;
+	}
+
+	#ball {
+		border: 22px solid $antiwhite;
+		border-radius: 100px;
+		height: 160px;
+		width: 160px;
+		position: absolute;
+		transition: 0.4s;
+		cursor: pointer;
+		text-align: center;
+		font-size: 24px;
+		background: $yankeesblue;
+
+		#icon {
+			position: relative;
+			font-size: 70px;
+      		top: 17%;
+      		color: $antiwhite;
+
+      		.inside-text {
+      			display: none;
+      			position: absolute;
+      			top: 20%;
+      			font-size: 32px;
+      			color: $antiwhite;
+      			font-weight: bold;
+      			transition: 0.4s;
+      		}
+      		.long.inside-text {
+      			left: -25%;
+      		}
+		}
+
+		&:hover {
+			@include grow(1.2);
+			border: 15px solid $cerulean;
+			//background: grey;
+		}
+	}
+
+}
+
+.first-ball {
+  left: 20%;
+  top: 34%; }
+
+.second-ball {
+  left: 43%;
+  top: 5%; }
+
+.third-ball {
+  left: 66%;
+  top: 34%; }
+
+.fourth-ball {
+  left: 43%;
+  top: 65%; }
