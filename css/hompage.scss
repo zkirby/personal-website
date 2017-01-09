@@ -42,12 +42,16 @@ body {
 	width: 100%;
 
 	.name-text {
-		font-size: 140px;
-    	font-weight: bold;
     	color: $yankeesblue;
     	position: absolute;
-    	top: 30%;
-    	left: 36.5%;
+    	top: 31%;
+    	left: 36%;
+
+    	font : {
+    		family: 'Merriweather Sans', sans-serif;
+    		weight: bold;
+    		size: 140px;
+    	}
 	}
 
 	#ball {
@@ -71,14 +75,21 @@ body {
       		.inside-text {
       			display: none;
       			position: absolute;
-      			top: 20%;
-      			font-size: 32px;
+      			top: 34%;
       			color: $antiwhite;
-      			font-weight: bold;
       			transition: 0.4s;
+
+      			font : {
+      				weight: bold;
+      				size: 32px;
+      				family: 'Merriweather Sans', sans-serif;
+      			}
       		}
       		.long.inside-text {
-      			left: -25%;
+      			left: -37%;
+      		}
+      		.medium.inside-text {
+      			left: -16%;
       		}
 		}
 
@@ -106,3 +117,4 @@ body {
 .fourth-ball {
   left: 43%;
   top: 65%; }
+

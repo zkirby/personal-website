@@ -16,12 +16,13 @@ body {
   height: 100%;
   width: 100%; }
   .background-div .name-text {
-    font-size: 140px;
-    font-weight: bold;
     color: #13293D;
     position: absolute;
-    top: 30%;
-    left: 36.5%; }
+    top: 31%;
+    left: 36%;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: bold;
+    font-size: 140px; }
   .background-div #ball {
     border: 22px solid #E8F1F2;
     border-radius: 100px;
@@ -41,13 +42,16 @@ body {
       .background-div #ball #icon .inside-text {
         display: none;
         position: absolute;
-        top: 20%;
-        font-size: 32px;
+        top: 34%;
         color: #E8F1F2;
+        transition: 0.4s;
         font-weight: bold;
-        transition: 0.4s; }
+        font-size: 32px;
+        font-family: 'Merriweather Sans', sans-serif; }
       .background-div #ball #icon .long.inside-text {
-        left: -25%; }
+        left: -37%; }
+      .background-div #ball #icon .medium.inside-text {
+        left: -16%; }
     .background-div #ball:hover {
       transform: scale(1.2);
       transform: -webkit-scale(1.2);

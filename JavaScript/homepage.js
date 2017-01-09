@@ -14,4 +14,13 @@ $(document).ready(function(){
 			$icon.css("color", "#E8F1F2");
 			$text.css("display", "none");
 		});
+
+	$("div[id=ball]").click(function() {
+		if(this.className == "fourth-ball"){
+			window.open("Resources/resume.pdf");
+		} else {
+			alert("Yikes! This part of the website is under construction!")
+		}
+	});
+
 });
