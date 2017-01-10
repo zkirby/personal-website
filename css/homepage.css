@@ -7,15 +7,15 @@ body {
   height: 100%;
   background: #13293D; }
 
-.background-div {
+.bubble-home {
   background: #006494;
-  background: -webkit-adial-gradient(#006494, #13293D);
+  background: -webkit-radial-gradient(#006494, #13293D);
   background: -o-radial-gradient(#006494, #13293D);
   background: -moz-radial-gradient(#006494, #13293D);
   background: radial-gradient(#006494, #13293D);
   height: 100%;
   width: 100%; }
-  .background-div .name-text {
+  .bubble-home .name-text {
     color: #13293D;
     position: absolute;
     top: 31%;
@@ -23,7 +23,7 @@ body {
     font-family: 'Merriweather Sans', sans-serif;
     font-weight: bold;
     font-size: 140px; }
-  .background-div #ball {
+  .bubble-home #ball {
     border: 22px solid #E8F1F2;
     border-radius: 100px;
     height: 160px;
@@ -34,12 +34,12 @@ body {
     text-align: center;
     font-size: 24px;
     background: #13293D; }
-    .background-div #ball #icon {
+    .bubble-home #ball #icon {
       position: relative;
       font-size: 70px;
       top: 17%;
       color: #E8F1F2; }
-      .background-div #ball #icon .inside-text {
+      .bubble-home #ball #icon .inside-text {
         display: none;
         position: absolute;
         top: 34%;
@@ -48,16 +48,22 @@ body {
         font-weight: bold;
         font-size: 32px;
         font-family: 'Merriweather Sans', sans-serif; }
-      .background-div #ball #icon .long.inside-text {
+      .bubble-home #ball #icon .long.inside-text {
         left: -37%; }
-      .background-div #ball #icon .medium.inside-text {
+      .bubble-home #ball #icon .medium.inside-text {
         left: -16%; }
-    .background-div #ball:hover {
+    .bubble-home #ball:hover {
       transform: scale(1.2);
       transform: -webkit-scale(1.2);
       transform: -o-scale(1.2);
       transform: -moz-scale(1.2);
       border: 15px solid #1B98E0; }
+
+.about-inpage {
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: -1; }
 
 .first-ball {
   left: 20%;
@@ -74,5 +80,21 @@ body {
 .fourth-ball {
   left: 43%;
   top: 65%; }
+
+@keyframes bubble_drop_one {
+  100% {
+    top: 65%;
+    left: 11%; } }
+@keyframes bubble_drop_two {
+  100% {
+    top: 65%;
+    left: 33%; } }
+@keyframes bubble_drop_three {
+  100% {
+    top: 65%;
+    left: 77%; } }
+@keyframes bubble_drop_four {
+  100% {
+    left: 55%; } }
 
 /*# sourceMappingURL=homepage.css.map */

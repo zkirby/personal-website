@@ -16,7 +16,7 @@ $ball-names: "first-ball", "second-ball", "third-ball", "fourth-ball";
 // Mixins 
 @mixin radial_blur($startcolor, $endcolor) {
 	background: $startcolor;
-	background: -webkit-adial-gradient($startcolor, $endcolor); 
+	background: -webkit-radial-gradient($startcolor, $endcolor); 
   	background: -o-radial-gradient($startcolor, $endcolor); 
   	background: -moz-radial-gradient($startcolor, $endcolor); 
   	background: radial-gradient($startcolor, $endcolor); 
@@ -36,7 +36,7 @@ body {
 	background: $yankeesblue;
 }
 
-.background-div {
+.bubble-home {
 	@include radial_blur($seablue, $yankeesblue);
 	height: 100%;
 	width: 100%;
@@ -65,7 +65,7 @@ body {
 		text-align: center;
 		font-size: 24px;
 		background: $yankeesblue;
-
+  
 		#icon {
 			position: relative;
 			font-size: 70px;
@@ -96,11 +96,17 @@ body {
 		&:hover {
 			@include grow(1.2);
 			border: 15px solid $cerulean;
-			//background: grey;
 		}
 	}
-
 }
+
+.about-inpage {
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
 
 .first-ball {
   left: 20%;
@@ -117,4 +123,11 @@ body {
 .fourth-ball {
   left: 43%;
   top: 65%; }
+
+
+// Animations 
+@keyframes bubble_drop_one { 100% {top: 65%; left: 11%} }
+@keyframes bubble_drop_two { 100% {top: 65%; left: 33%} }
+@keyframes bubble_drop_three { 100% {top: 65%; left: 77%} }
+@keyframes bubble_drop_four { 100% {left: 55%} }
 

@@ -18,9 +18,18 @@ $(document).ready(function(){
 	$("div[id=ball]").click(function() {
 		if(this.className == "fourth-ball"){
 			window.open("Resources/resume.pdf");
-		} else {
-			alert("Yikes! This part of the website is under construction!")
+		} else if(this.className == "second-ball"){
+			$(".name-text").fadeOut();
+			$("div[id=ball][class=first-ball]").css("animation", "bubble_drop_one 1s ease-out 0s 1");
+			$("div[id=ball][class=second-ball]").css("animation", "bubble_drop_two 1s ease-out 0s 1");
+			$("div[id=ball][class=third-ball]").css("animation", "bubble_drop_three 1s ease-out 0s 1");
+			$("div[id=ball][class=fourth-ball]").css("animation", "bubble_drop_four 1s ease-out 0s 1");
+			$("div[id=ball]").css("animation-fill-mode", "forwards"); $(".home-button").fadeIn("slow");
 		}
 	});
+
+	$(".home-button").click(function(){
+		$(this).fadeOut(); $(".name-text").fadeIn();
+	})
 
 });
