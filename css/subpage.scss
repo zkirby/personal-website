@@ -1,0 +1,83 @@
+/* 
+The Style sheet for the sub pages.
+Constructed using Scss
+*/
+
+// Color Palette
+$seablue: #006494;
+$lapiz: #247BA0;
+$antiwhite: #E8F1F2;
+$cerulean: #1B98E0;
+$yankeesblue: #13293D;
+
+// Mixins
+@mixin box-shadow($specs) {
+	-webkit-box-shadow: $specs;
+	-moz-box-shadow: $specs;
+	box-shadow: $specs;
+}
+
+.about-row {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+
+	.nav-bar {
+		position: relative;
+		height: 100%;
+
+		.nav-group {
+			@include box-shadow(-5px 7px 0px -1px #999);
+			position: absolute;
+      		height: 37%;
+      		width: 87%;
+      		background: $antiwhite;
+      		opacity: 0.8;
+      		top: 28%;
+      		left: 27%;
+      		border-radius: 25px;
+
+      		.nav-button {
+      			background: $seablue;
+      			margin-top: 15px;
+      			position: relative;
+      			left: 10%;
+      			text-align: center;
+      			height: 20%;
+      			width: 80%;
+      			border-radius: 25px;
+      			color: $antiwhite;
+      			line-height: 35px;
+      			cursor: pointer;
+      			top: 5%;
+
+      			.button-two {
+      				top: 30%;
+      			}
+
+      			.button-three {
+      				top: 60%;
+      			}
+
+      			&:hover {
+      				background: $yankeesblue;
+      			}
+
+      			font : {
+      				family: 'Merriweather Sans', sans-serif;
+      				size: 20px;
+      				weight: bold;
+      			}
+      		}
+		}
+	}
+
+	.content-section {
+		text-align: center;
+		height: 100%;
+
+		font : {
+			family: 'Merriweather Sans', sans-serif;
+		}
+	}
+}

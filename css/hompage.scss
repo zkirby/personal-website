@@ -69,8 +69,8 @@ body {
 		#icon {
 			position: relative;
 			font-size: 70px;
-      		top: 17%;
-      		color: $antiwhite;
+      top: 17%;
+      color: $antiwhite;
 
       		.inside-text {
       			display: none;
@@ -104,17 +104,14 @@ body {
 }
 
 .inpage {
-  background: red;
+  background: $seablue;
   position: absolute;
   height: 100%;
   width: 100%;
 
   .border-line {
     position: absolute;
-    top: 98%;
-    height: 2%;
     background: $yankeesblue;
-    width: 100%;
   }
   .horizontal{
     top: 98%;
@@ -124,14 +121,14 @@ body {
   .vertical-left{
     top: 0%;
     height: 100%;
-    width: 2%;
-    left: 98%;
+    width: 1%;
+    right: 99%;
   }
   .vertical-right{
     top: 0%;
     height: 100%;
-    width: 2%;
-    right: 98%;
+    width: 1%;
+    left: 99%;
   }
 }
 
@@ -158,10 +155,10 @@ body {
 
 /* --Animations --*/
 // About-drop
-@keyframes bubble_drop_one { 100% {top: 72%; left: 11%;} }
-@keyframes bubble_drop_two { 100% {top: 72%; left: 33%;} }
-@keyframes bubble_drop_three { 100% {top: 72%; left: 77%;} }
-@keyframes bubble_drop_four { 100% {left: 55%; top: 72%;} }
+@keyframes bubble_drop_one { 100% {@include grow(0.9); top: 72%; left: 11%;} }
+@keyframes bubble_drop_two { 100% {@include grow(0.9); top: 72%; left: 33%;} }
+@keyframes bubble_drop_three { 100% {@include grow(0.9); top: 72%; left: 77%;} }
+@keyframes bubble_drop_four { 100% {@include grow(0.9); left: 55%; top: 72%;} }
 
 // CS-right
 @keyframes bubble_right_one { 100% {@include grow(0.9); top: 24.5%; left: 2%;} }
@@ -179,7 +176,7 @@ body {
 @keyframes bubble_return_one { 100% {top: 34%; left: 20%;} }
 @keyframes bubble_return_two { 100% {top: 5%; left: 43%;} }
 @keyframes bubble_return_three { 100% {top: 34%; left: 66%;} }
-@keyframes bubble_return_four { 100% {left: 43%; top: 64%;} }
+@keyframes bubble_return_four { 100% {left: 43%; top: 65%;} }
 
 
 

@@ -62,16 +62,13 @@ body {
       border: 15px solid #1B98E0; }
 
 .inpage {
-  background: red;
+  background: #006494;
   position: absolute;
   height: 100%;
   width: 100%; }
   .inpage .border-line {
     position: absolute;
-    top: 98%;
-    height: 2%;
-    background: #13293D;
-    width: 100%; }
+    background: #13293D; }
   .inpage .horizontal {
     top: 98%;
     height: 2%;
@@ -79,13 +76,13 @@ body {
   .inpage .vertical-left {
     top: 0%;
     height: 100%;
-    width: 2%;
-    left: 98%; }
+    width: 1%;
+    right: 99%; }
   .inpage .vertical-right {
     top: 0%;
     height: 100%;
-    width: 2%;
-    right: 98%; }
+    width: 1%;
+    left: 99%; }
 
 .about-inpage {
   top: -100%;
@@ -117,18 +114,34 @@ body {
 /* --Animations --*/
 @keyframes bubble_drop_one {
   100% {
+    transform: scale(0.9);
+    transform: -webkit-scale(0.9);
+    transform: -o-scale(0.9);
+    transform: -moz-scale(0.9);
     top: 72%;
     left: 11%; } }
 @keyframes bubble_drop_two {
   100% {
+    transform: scale(0.9);
+    transform: -webkit-scale(0.9);
+    transform: -o-scale(0.9);
+    transform: -moz-scale(0.9);
     top: 72%;
     left: 33%; } }
 @keyframes bubble_drop_three {
   100% {
+    transform: scale(0.9);
+    transform: -webkit-scale(0.9);
+    transform: -o-scale(0.9);
+    transform: -moz-scale(0.9);
     top: 72%;
     left: 77%; } }
 @keyframes bubble_drop_four {
   100% {
+    transform: scale(0.9);
+    transform: -webkit-scale(0.9);
+    transform: -o-scale(0.9);
+    transform: -moz-scale(0.9);
     left: 55%;
     top: 72%; } }
 @keyframes bubble_right_one {
@@ -210,6 +223,6 @@ body {
 @keyframes bubble_return_four {
   100% {
     left: 43%;
-    top: 64%; } }
+    top: 65%; } }
 
 /*# sourceMappingURL=homepage.css.map */

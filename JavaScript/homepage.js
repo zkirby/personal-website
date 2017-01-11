@@ -2,6 +2,7 @@ $(document).ready(function(){
 	"use strict";
 
 	var current_pos = "home";
+	var movement = {};
 
 	$("div[id=ball]").hover(
 		function() {
@@ -35,62 +36,64 @@ $(document).ready(function(){
 
 		// The Second ball is the about page
 		} else if(this.className == "second-ball"){
-			if(current_pos != "about-page"){
+			if(current_pos != "about-inpage"){
+				flush_page(current_pos, movement);
 
-				$name.fadeOut(); animate_bubbles(bubbles_array,"bubble_drop") // Animate the homescreen
-				$(".about-inpage").animate({top: "-10%"}, 1000); // Animate the about page
-				current_pos = "about-page"; // Update our position 
+				$name.fadeOut(); animate_bubbles(bubbles_array,"bubble_drop", true) // Animate the homescreen
+				$(".about-inpage").animate({top: "-8%"}, 1000); // Animate the about page
+				current_pos = "about-inpage"; movement = {top: "-100%"};// Update our position 
 
 			} else {
 				$(".about-inpage").animate({top: "-100%"}, 800); // Animate the about page
-				animate_bubbles(bubbles_array,"bubble_return"); $name.fadeIn(2000);
+				animate_bubbles(bubbles_array, "bubble_return"); $name.fadeIn(2000);
 				current_pos = "home"; // Update our position 
 			};
 
 		// The Third ball is the cs page
 		} else if(this.className == "third-ball"){
-			if(current_pos != "cs-page"){
+			if(current_pos != "cs-inpage"){
+				flush_page(current_pos, movement);
 
-				$name.fadeOut(); animate_bubbles(bubbles_array,"bubble_right") // Animate the homescreen
-				$(".cs-inpage").animate({right: "-10%", display: "block"}, 1000); // Animate the about page
-				current_pos = "cs-page"; // Update our position 
+				$name.fadeOut(); animate_bubbles(bubbles_array,"bubble_right", true) // Animate the homescreen
+				$(".cs-inpage").animate({right: "-15%"}, 1000); $(".cs-inpage").show();// Animate the cs page
+				current_pos = "cs-inpage"; movement = {right: "-100%"}; // Update our position 
 
 			} else {
-				$(".cs-inpage").animate({right: "-100%"}, 800); // Animate the about page
+				$(".cs-inpage").animate({right: "-100%"}, 800); // Animate the cs page
 				animate_bubbles(bubbles_array,"bubble_return"); $name.fadeIn(2000);
-				$(".cs-inpage").animate({display: "none"}, 10); // Hide it 
+				$(".cs-inpage").hide(); // Hide it 
 				current_pos = "home"; // Update our position 
 			};
 
 		// The Fourth ball is the film page
 		} else if(this.className == "first-ball"){
 			console.log("True");
-			if(current_pos != "film-page"){
+			if(current_pos != "film-inpage"){
+				flush_page(current_pos, movement);
 
-				$name.fadeOut(); animate_bubbles(bubbles_array,"bubble_left") // Animate the homescreen
-				$(".film-inpage").animate({left: "-10%"}, 1000); // Animate the about page
-				current_pos = "film-page"; // Update our position 
+				$name.fadeOut(); animate_bubbles(bubbles_array,"bubble_left", true) // Animate the homescreen
+				$(".film-inpage").animate({left: "-13.5%"}, 1000); // Animate the film page
+				current_pos = "film-inpage"; movement = {left: "-100%"};// Update our position 
 
 			} else {
-				$(".film-inpage").animate({left: "-100%"}, 800); // Animate the about page
+				$(".film-inpage").animate({left: "-100%"}, 800); // Animate the film page
 				animate_bubbles(bubbles_array,"bubble_return"); $name.fadeIn(2000);
 				current_pos = "home"; // Update our position 
 			};
 		};
-		console.log(this.className);
 	});
 
 
 	// Animation Functions
-	function animate_bubbles(obj_array, animation_string) {
+	function animate_bubbles(obj_array, animation_string, scale) {
 		/* used to animate all the bubbles at once*/
-		animate_obj(animation_string+"_one", obj_array[0]);
-		animate_obj(animation_string+"_two", obj_array[1]);
-		animate_obj(animation_string+"_three", obj_array[2]);
-		animate_obj(animation_string+"_four", obj_array[3]);
+		animate_obj(animation_string+"_one", obj_array[0], scale);
+		animate_obj(animation_string+"_two", obj_array[1], scale);
+		animate_obj(animation_string+"_three", obj_array[2], scale);
+		animate_obj(animation_string+"_four", obj_array[3], scale);
 	};
 
-	function animate_obj(animation_string, obj, grow) {
+	function animate_obj(animation_string, obj, scale) {
 		/* Adds a CSS animation, remmebers the end state
 		of the animation and then removes the animation and saves 
 		the current state of the jQuery Object */
@@ -102,16 +105,20 @@ $(document).ready(function(){
 		obj.on('webkitAnimationEnd', function() {
 			var top = obj.css("top"); var left = obj.css("left");
 			obj.removeAttr("style");
-			obj.css("top", top); obj.css("left", left);
+			obj.css("top", top); obj.css("left", left); 
+			if(scale){
+				obj.css("transform", "scale(0.9)"); obj.css("-webkit-transform", "scale(0.9)");
+				obj.css("-moz-transform", "scale(0.9)"); obj.css("-o-transform", "scale(0.9)");
+			}
     	});
 	};
 
-	function flush_pages(Exclude){
+	function flush_page(current_pos, movement){
 		/* Return all pages back to the "Home"
-		 Position, exluding a page */
-
-		
-		$(".film-inpage").animate({left: "-100%"}, 800);
+		 Position, exluding home page */
+		 if(current_pos != "home"){
+			$("."+current_pos).animate(movement, 800);
+		}
 	}
 
 
