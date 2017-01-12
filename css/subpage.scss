@@ -51,14 +51,6 @@ $yankeesblue: #13293D;
       			cursor: pointer;
       			top: 5%;
 
-      			.button-two {
-      				top: 30%;
-      			}
-
-      			.button-three {
-      				top: 60%;
-      			}
-
       			&:hover {
       				background: $yankeesblue;
       			}
@@ -75,9 +67,49 @@ $yankeesblue: #13293D;
 	.content-section {
 		text-align: center;
 		height: 100%;
+            color: $antiwhite;
 
 		font : {
 			family: 'Merriweather Sans', sans-serif;
+                  size: 42px;
 		}
+
+            .content-body {
+                  height: 80%;
+                  width: 92%;
+                  top: 13%;
+                  left: 7%;
+                  position: absolute;
+                  background: $yankeesblue;
+                  border-radius: 10px;
+                  border: 5px solid $antiwhite;
+                  overflow: scroll;
+
+                  .me-body{}
+                  .organizations-body{display: none;}
+                  .contact-body{display:none;}
+            }
+
+            .header-text {
+                  color: $lapiz;
+                  top: 1%;
+                  position: absolute;
+                  left: 39%;
+                  font-weight: bold;
+            }
+
+            .content-text {
+                  top: 15%;
+                  position: absolute;
+                  left: 6%;
+                  font-size: 24px;
+                  width: 88%
+            }
 	}
 }
+
+
+
+
+
+

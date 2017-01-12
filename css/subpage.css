@@ -37,15 +37,39 @@ Constructed using Scss
         font-family: 'Merriweather Sans', sans-serif;
         font-size: 20px;
         font-weight: bold; }
-        .about-row .nav-bar .nav-group .nav-button .button-two {
-          top: 30%; }
-        .about-row .nav-bar .nav-group .nav-button .button-three {
-          top: 60%; }
         .about-row .nav-bar .nav-group .nav-button:hover {
           background: #13293D; }
   .about-row .content-section {
     text-align: center;
     height: 100%;
-    font-family: 'Merriweather Sans', sans-serif; }
+    color: #E8F1F2;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 42px; }
+    .about-row .content-section .content-body {
+      height: 80%;
+      width: 92%;
+      top: 13%;
+      left: 7%;
+      position: absolute;
+      background: #13293D;
+      border-radius: 10px;
+      border: 5px solid #E8F1F2;
+      overflow: scroll; }
+      .about-row .content-section .content-body .organizations-body {
+        display: none; }
+      .about-row .content-section .content-body .contact-body {
+        display: none; }
+    .about-row .content-section .header-text {
+      color: #247BA0;
+      top: 1%;
+      position: absolute;
+      left: 39%;
+      font-weight: bold; }
+    .about-row .content-section .content-text {
+      top: 15%;
+      position: absolute;
+      left: 6%;
+      font-size: 24px;
+      width: 88%; }
 
 /*# sourceMappingURL=subpage.css.map */
