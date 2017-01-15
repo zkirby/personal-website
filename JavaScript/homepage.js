@@ -55,13 +55,13 @@ $(document).ready(function(){
 				flush_page(current_pos, movement);
 
 				$name.fadeOut(); animate_bubbles(bubbles_array,"bubble_right", true) // Animate the homescreen
-				$(".cs-inpage").animate({right: "-15%"}, 1000); $(".cs-inpage").show();// Animate the cs page
+				$(".cs-inpage").animate({right: "0%"}, 1000); $(".cs-inpage").show();// Animate the cs page
 				current_pos = "cs-inpage"; movement = {right: "-100%"}; // Update our position 
 
 			} else {
 				$(".cs-inpage").animate({right: "-100%"}, 800); // Animate the cs page
 				animate_bubbles(bubbles_array,"bubble_return"); $name.fadeIn(2000);
-				$(".cs-inpage").hide(); // Hide it 
+				$(".cs-inpage").hide(500); // Hide it 
 				current_pos = "home"; // Update our position 
 			};
 

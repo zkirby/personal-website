@@ -2,14 +2,14 @@
 The Style sheet for the sub pages.
 Constructed using Scss
 */
-.about-row {
+.row {
   position: absolute;
   height: 100%;
   width: 100%; }
-  .about-row .nav-bar {
+  .row .nav-bar {
     position: relative;
     height: 100%; }
-    .about-row .nav-bar .nav-group {
+    .row .nav-bar .nav-group {
       -webkit-box-shadow: -5px 7px 0px -1px #999;
       -moz-box-shadow: -5px 7px 0px -1px #999;
       box-shadow: -5px 7px 0px -1px #999;
@@ -21,7 +21,7 @@ Constructed using Scss
       top: 28%;
       left: 27%;
       border-radius: 25px; }
-      .about-row .nav-bar .nav-group .nav-button {
+      .row .nav-bar .nav-group .nav-button {
         background: #006494;
         margin-top: 15px;
         position: relative;
@@ -37,15 +37,15 @@ Constructed using Scss
         font-family: 'Merriweather Sans', sans-serif;
         font-size: 20px;
         font-weight: bold; }
-        .about-row .nav-bar .nav-group .nav-button:hover {
+        .row .nav-bar .nav-group .nav-button:hover {
           background: #13293D; }
-  .about-row .content-section {
+  .row .content-section {
     text-align: center;
     height: 100%;
     color: #E8F1F2;
     font-family: 'Merriweather Sans', sans-serif;
     font-size: 42px; }
-    .about-row .content-section .content-body {
+    .row .content-section .content-body {
       height: 80%;
       width: 92%;
       top: 13%;
@@ -55,21 +55,71 @@ Constructed using Scss
       border-radius: 10px;
       border: 5px solid #E8F1F2;
       overflow: scroll; }
-      .about-row .content-section .content-body .organizations-body {
+      .row .content-section .content-body .organizations-body {
         display: none; }
-      .about-row .content-section .content-body .contact-body {
+      .row .content-section .content-body .contact-body {
         display: none; }
-    .about-row .content-section .header-text {
+    .row .content-section .header-text {
       color: #247BA0;
       top: 1%;
       position: absolute;
       left: 39%;
       font-weight: bold; }
-    .about-row .content-section .content-text {
+    .row .content-section .content-text {
       top: 15%;
       position: absolute;
       left: 6%;
       font-size: 24px;
       width: 88%; }
+
+.nav-row {
+  position: absolute;
+  height: 20%;
+  width: 90%;
+  z-index: 1; }
+  .nav-row .nav-bar-horizontal {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    z-index: 2; }
+    .nav-row .nav-bar-horizontal .nav-group {
+      -webkit-box-shadow: -5px 7px 0px -1px #999;
+      -moz-box-shadow: -5px 7px 0px -1px #999;
+      box-shadow: -5px 7px 0px -1px #999;
+      position: absolute;
+      height: 43%;
+      width: 100%;
+      background: #E8F1F2;
+      opacity: 0.8;
+      top: 9%;
+      left: 33%;
+      border-radius: 10px;
+      z-index: 3; }
+      .nav-row .nav-bar-horizontal .nav-group .nav-button {
+        background: #006494;
+        margin-top: 15px;
+        position: relative;
+        left: 5%;
+        text-align: center;
+        height: 80%;
+        top: -20%;
+        width: 20%;
+        border-radius: 25px;
+        color: #E8F1F2;
+        line-height: 35px;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 10px;
+        z-index: 10;
+        font-family: 'Merriweather Sans', sans-serif;
+        font-size: 20px;
+        font-weight: bold; }
+        .nav-row .nav-bar-horizontal .nav-group .nav-button:hover {
+          background: #13293D; }
+
+.content-row {
+  position: absolute;
+  height: 100%;
+  width: 100%; }
 
 /*# sourceMappingURL=subpage.css.map */

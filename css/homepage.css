@@ -91,7 +91,8 @@ body {
 
 .cs-inpage {
   right: -100%;
-  display: none; }
+  display: none;
+  width: 85%; }
 
 .film-inpage {
   left: -100%; }

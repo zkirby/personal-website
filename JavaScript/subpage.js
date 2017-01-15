@@ -13,6 +13,22 @@ $(document).ready(function(){
 							{"object": $(".nav-button.button-three"), 
 							 "body": $(".contact-body"),
 							 "group": "1"},
+					"nav-button button-four":
+							{"object": $(".nav-button.button-four"), 
+							 "body": $(".projects-body"),
+							 "group": "2"},
+					"nav-button button-five":
+							{"object": $(".nav-button.button-five"), 
+							 "body": $(".experience-body"),
+							 "group": "2"},
+					"nav-button button-six":
+							{"object": $(".nav-button.button-six"), 
+							 "body": $(".classrev-body"),
+							 "group": "2"},
+					"nav-button button-seven":
+							{"object": $(".nav-button.button-seven"), 
+							 "body": $(".resources-body"),
+							 "group": "2"},
 					};
 
 	// Set the first buttons active
