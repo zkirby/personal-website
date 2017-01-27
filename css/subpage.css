@@ -2,6 +2,11 @@
 The Style sheet for the sub pages.
 Constructed using Scss
 */
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
+
 .row {
   position: absolute;
   height: 100%;
@@ -49,7 +54,6 @@ Constructed using Scss
       height: 80%;
       width: 92%;
       top: 13%;
-      left: 7%;
       position: absolute;
       background: #13293D;
       border-radius: 10px;
@@ -59,18 +63,47 @@ Constructed using Scss
         display: none; }
       .row .content-section .content-body .contact-body {
         display: none; }
+      .row .content-section .content-body .reviews-body {
+        display: none; }
+      .row .content-section .content-body .toppicks-body {
+        display: none; }
+      .row .content-section .content-body .gallery-body {
+        display: none; }
+      .row .content-section .content-body .recommend-body {
+        display: none; }
+      .row .content-section .content-body .experience-body {
+        display: none; }
+      .row .content-section .content-body .classrev-body {
+        display: none; }
+      .row .content-section .content-body .resources-body {
+        display: none; }
     .row .content-section .header-text {
       color: #247BA0;
       top: 1%;
       position: absolute;
       left: 39%;
       font-weight: bold; }
-    .row .content-section .content-text {
+    .row .content-section .header-text.long-header {
+      left: 33.5%; }
+    .row .content-section .generic-content-text {
       top: 15%;
-      position: absolute;
       left: 6%;
       font-size: 24px;
-      width: 88%; }
+      width: 88%;
+      position: absolute; }
+    .row .content-section .text-body {
+      position: absolute;
+      left: 25%;
+      top: 20%; }
+      .row .content-section .text-body .content-text {
+        position: relative;
+        font-size: 28px;
+        width: 88%; }
+      .row .content-section .text-body .sub-text {
+        font-size: 22px;
+        opacity: 0.8;
+        position: relative;
+        right: 5%; }
 
 .nav-row {
   position: absolute;
@@ -92,7 +125,6 @@ Constructed using Scss
       background: #E8F1F2;
       opacity: 0.8;
       top: 9%;
-      left: 33%;
       border-radius: 10px;
       z-index: 3; }
       .nav-row .nav-bar-horizontal .nav-group .nav-button {
@@ -121,5 +153,33 @@ Constructed using Scss
   position: absolute;
   height: 100%;
   width: 100%; }
+
+.coming-soon {
+  color: #E8F1F2;
+  cursor: pointer;
+  height: 20%;
+  width: 30%;
+  top: 40%;
+  left: 35.5%;
+  position: absolute;
+  transition: 0.5s;
+  opacity: 0.7;
+  font-size: 42px;
+  font-weight: bold; }
+  .coming-soon:hover {
+    opacity: 1;
+    color: #E8F1F2; }
+
+.content-push {
+  left: 5%; }
+
+.content-pull {
+  left: 7%; }
+
+.nav-pull {
+  left: 29%; }
+
+.nav-push {
+  left: 34%; }
 
 /*# sourceMappingURL=subpage.css.map */

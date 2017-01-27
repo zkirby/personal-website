@@ -72,7 +72,7 @@ $(document).ready(function(){
 				flush_page(current_pos, movement);
 
 				$name.fadeOut(); animate_bubbles(bubbles_array,"bubble_left", true) // Animate the homescreen
-				$(".film-inpage").animate({left: "-13.5%"}, 1000); // Animate the film page
+				$(".film-inpage").animate({left: "0%"}, 1000); // Animate the film page
 				current_pos = "film-inpage"; movement = {left: "-100%"};// Update our position 
 
 			} else {

@@ -29,23 +29,59 @@ $(document).ready(function(){
 							{"object": $(".nav-button.button-seven"), 
 							 "body": $(".resources-body"),
 							 "group": "2"},
+					"nav-button button-eight":
+							{"object": $(".nav-button.button-eight"), 
+							 "body": $(".reviews-body"),
+							 "group": "3"},
+					"nav-button button-nine":
+							{"object": $(".nav-button.button-nine"), 
+							 "body": $(".toppicks-body"),
+							 "group": "3"},
+					"nav-button button-ten":
+							{"object": $(".nav-button.button-ten"), 
+							 "body": $(".gallery-body"),
+							 "group": "3"},
+					"nav-button button-eleven":
+							{"object": $(".nav-button.button-eleven"), 
+							 "body": $(".recommend-body"),
+							 "group": "3"},
 					};
 
 	// Set the first buttons active
 	set_active(buttons["nav-button button-one"]["object"]);
-	var last_active = buttons["nav-button button-one"];
+	set_active(buttons["nav-button button-four"]["object"]);
+	set_active(buttons["nav-button button-eight"]["object"]);
+	var last_active_top = buttons["nav-button button-one"];
+	var last_active_left = buttons["nav-button button-four"];
+	var last_active_right = buttons["nav-button button-eight"];
+
 
 	$("div[class~=nav-button]").click(function(){
 		var button = buttons[this.className];
+		var group = button["group"]
 
-		if(button != last_active){
-			if(button["group"] == last_active["group"]){
-				switch_showing(button, last_active);
+		if(group == "1"){
+			if(button != last_active_top){
+				switch_showing(button, last_active_top);
 			    set_active(button["object"]); 
-			    set_unactive(last_active["object"]);
-			    last_active = button;
+			    set_unactive(last_active_top["object"]);
+			    last_active_top = button;
 			}
-		};
+		} else if(group == "2") {
+			if(button != last_active_left){
+				switch_showing(button, last_active_left);
+			    set_active(button["object"]); 
+			    set_unactive(last_active_left["object"]);
+			    last_active_left = button;
+			}
+		} else if(group == "3"){
+			if(button != last_active_right){
+				switch_showing(button, last_active_right);
+			    set_active(button["object"]); 
+			    set_unactive(last_active_right["object"]);
+			    last_active_right = button;
+			}
+		}
 	});
 
 });
