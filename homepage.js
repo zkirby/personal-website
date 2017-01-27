@@ -121,9 +121,8 @@ $(document).ready(function(){
 			$("."+current_pos).animate(movement, 800);
 		}
 	}
-
-
+*/
+});
 });
 
 
-*/
