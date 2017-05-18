@@ -1,8 +1,3 @@
-# zkirby.github.io
+# Personal Website
 
-Currently a work in progress!
-
-
-Personal Website, links back to many of my other constructed websites. Looks pretty too. Check it out.
-
-Built with: Bootstrap + HTML5, SCSS, and jQuery 
+An older version of my personal website, I have retired it but you can still find it hosted on my main website
