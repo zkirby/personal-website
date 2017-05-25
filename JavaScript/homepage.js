@@ -4,6 +4,10 @@ $(document).ready(function(){
 	var current_pos = "home";
 	var movement = {};
 
+	$(".submit").click(function(){
+		
+	});
+
 	$("div[id=ball]").hover(
 		function() {
 			var $text = $(this).find(".inside-text");
@@ -28,7 +32,7 @@ $(document).ready(function(){
 		var $second = $("div[id=ball][class=second-ball]");
 		var $third = $("div[id=ball][class=third-ball]");
 		var $fourth = $("div[id=ball][class=fourth-ball]");
-		var bubbles_array = [$first, $second, $third, $fourth]
+		var bubbles_array = [$first, $second, $third, $fourth];
 
 		// The fourth ball just liks to my resume
 		if(this.className == "fourth-ball"){
@@ -86,7 +90,7 @@ $(document).ready(function(){
 
 	// Animation Functions
 	function animate_bubbles(obj_array, animation_string, scale) {
-		/* used to animate all the bubbles at once*/
+		/* used to animate all the bubbles at once */
 		animate_obj(animation_string+"_one", obj_array[0], scale);
 		animate_obj(animation_string+"_two", obj_array[1], scale);
 		animate_obj(animation_string+"_three", obj_array[2], scale);
@@ -96,7 +100,7 @@ $(document).ready(function(){
 	function animate_obj(animation_string, obj, scale) {
 		/* Adds a CSS animation, remmebers the end state
 		of the animation and then removes the animation and saves 
-		the current state of the jQuery Object */
+		the current state of the jQuery Object  */
 		obj.css("animation", animation_string+" 1s ease-out 0s 1");
 		obj.css("animation-fill-mode", "forwards");
 
@@ -115,11 +119,12 @@ $(document).ready(function(){
 
 	function flush_page(current_pos, movement){
 		/* Return all pages back to the "Home"
-		 Position, exluding home page */
+		 Position, exluding home page  */
 		 if(current_pos != "home"){
 			$("."+current_pos).animate(movement, 800);
 		}
 	}
 
-
 });
+
+

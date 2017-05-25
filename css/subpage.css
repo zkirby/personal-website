@@ -7,6 +7,9 @@ a {
   a:hover {
     text-decoration: none; }
 
+.row .content-section .projects-body .text-body {
+  left: 7%; }
+
 .row {
   position: absolute;
   height: 100%;

@@ -114,6 +114,42 @@ body {
   left: 43%;
   top: 65%; }
 
+/* Temporary */
+.modal-container {
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  z-index: 100;
+  background: #13293D;
+  color: #E8F1F2;
+  font-size: 16px;
+  z-index: 10; }
+
+.modal-overlay {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  opacity: 0.3;
+  background: #13293D;
+  z-index: 9; }
+
+.submit {
+  cursor: pointer;
+  position: absolute;
+  padding: 7px;
+  font-size: 14px;
+  padding-left: 18px;
+  padding-right: 18px;
+  color: white;
+  background: #85C1E9;
+  text-align: center;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s; }
+
 /* --Animations --*/
 @keyframes bubble_drop_one {
   100% {

@@ -84,17 +84,33 @@ $(document).ready(function(){
 		}
 	});
 
+	/** Check if button and last active need to switch active states
+	function check_switch(button, last_active) {
+		if (button != last_active) {
+			switch_showing(button, last_active);
+			set_active(button["object"]);
+			set_unactive(last_active["object"]);
+			last_active = button;
+		}
+	} */
+
+	/** switch the showing states of two buttons*/
+	function switch_showing(curr, prev){
+		curr["body"].css("display", "block");
+		prev["body"].css("display", "none");
+		//curr["body"].fadeIn();
+		//prev["body"].fadeOut();
+	}
+
+	/** set a button to be active */
+	function set_active(obj){
+		obj.css("background", "#13293D");
+	}
+
+	/** set a button to be unactive*/
+	function set_unactive(obj){
+		obj.removeAttr("style");
+	}
+
 });
 
-function switch_showing(curr, prev){
-	curr["body"].css("display", "block");
-	prev["body"].css("display", "none");
-};
-
-function set_active(obj){
-	obj.css("background", "#13293D");
-}
-
-function set_unactive(obj){
-	obj.removeAttr("style");
-}
